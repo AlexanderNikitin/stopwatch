@@ -51,8 +51,8 @@ public class StopWatch {
     public void stop() {
         long currentTime = System.nanoTime();
         if (active) {
-            long allTime = currentTime - startTime;
-            System.out.println(tab + "STOP " + String.valueOf(allTime) + " (overhead: " + String.valueOf(allTime - sumInterval) + ")");
+            long fullInterval = currentTime - startTime;
+            System.out.println(tab + "STOP " + String.valueOf(fullInterval) + " (overhead: " + String.valueOf(fullInterval - sumInterval) + ")");
         }
     }
 }
